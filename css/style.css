@@ -1,40 +1,36 @@
-.row {
-    /* width: 992px;
-    margin-left: auto; */
-    margin: auto;
-    margin-top: 100px;
-}
-
-#lezioni .row img {
-    /* per centrare orizzontalmente */
-    display: block;
-    margin: auto;
-}
-
-#lezioni,
-#why,
-#steps {
-    text-align: center;
-}
-
 /* BLOCCO PERCHE */
 
-#why .row>div {
+.why .row>div {
     width: 100%;
     margin-top: 80px;
 }
 
-#why .row img {
+.why img {
     background-color: #428bca;
     border-radius: 50%;
     padding: 30px
 }
 
-#why [class*=col] {
+.why [class*=col] {
+    padding-bottom: 10px;
     border-bottom: 2px solid grey;
 }
 
 /* COMMON */
+
+h2 {
+    font-size: 200%;
+}
+
+section {
+    text-align: center;
+    margin-top: 100px;
+    padding: 3%;
+}
+
+section [class*="col-"] * {
+    margin-top: 20px;
+}
 
 .grey {
     background-color: #f9f9f9;
@@ -44,4 +40,14 @@ img {
     display: block;
     margin: auto;
     height: 200px;
+    /* TEST */
+    /* max-width: 100%; */
+}
+
+@media screen and (min-width: 420px) and (max-width: 991px) {
+    .steps .container>[class*="col-"]:last-of-type {
+        padding: 0 calc(100% / 4);
+        /* quindi qualcosa del genere sarebbe preferibile all'uso degli offset? */
+    }
+
 }
